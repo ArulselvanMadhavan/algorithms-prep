@@ -10,7 +10,8 @@ public class InsertionSortTest {
 
     @Test
     public void printTestMessage(){
-//        assertArrayEquals(new int[]{2,3,4,5},obj.sort(new int[]{5,2,4,3}));
+        assertArrayEquals(new int[]{2,3,4,5},obj.sort(new int[]{5,2,4,3}));
         assertArrayEquals(new int[]{-1,0,0,1,5},obj.sort(new int[]{0,0,1,5,-1}));
+        assertArrayEquals(new int[]{-1,0,0,0,1,2,3,4,5},obj.sort(new int[]{0,0,1,4,2,0,3,5,-1}));
     }
 }

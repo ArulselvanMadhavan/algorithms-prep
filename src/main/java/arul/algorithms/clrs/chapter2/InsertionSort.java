@@ -25,16 +25,16 @@ public class InsertionSort {
         return numbers;
     }
 
-    public static void main(String[] args) throws IOException {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.println("Enter the numbers:(Ex: 2 4 11 3 4)");
-            String[] inputString = br.readLine().split(" ");
-            int[] inputIntegers = new int[inputString.length];
-            for (int i = 0; i < inputString.length; i++) {
-                inputIntegers[i] = Integer.parseInt(inputString[i]);
-            }
-            InsertionSort ins_obj = new InsertionSort();
-            ins_obj.sort(inputIntegers);
-        }
-    }
+//    public static void main(String[] args) throws IOException {
+//        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+//            System.out.println("Enter the numbers:(Ex: 2 4 11 3 4)");
+//            String[] inputString = br.readLine().split(" ");
+//            int[] inputIntegers = new int[inputString.length];
+//            for (int i = 0; i < inputString.length; i++) {
+//                inputIntegers[i] = Integer.parseInt(inputString[i]);
+//            }
+//            InsertionSort ins_obj = new InsertionSort();
+//            ins_obj.sort(inputIntegers);
+//        }
+//    }
 }
