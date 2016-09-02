@@ -1,7 +1,11 @@
+"""Pure Python."""
+
+
 def fib(n):
-    a,b = 0.0,1.0
+    """Fibonacci."""
+    a, b = 0.0, 1.0
     for x in range(n):
-        a,b = a+b, a
+        a, b = a+b, a
     return a
 
 if __name__ == '__main__':
