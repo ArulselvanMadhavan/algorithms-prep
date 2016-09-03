@@ -10,6 +10,7 @@ class Node(object):
         self.left = left
         self.right = right
         self.parent = parent
+        self.counter = 0
 
     def __str__(self):
         """String Representation of Node."""
@@ -25,6 +26,13 @@ class BinarySearchTree(object):
         """Constructor."""
         self.root = None
 
+    def createBST(self, keys):
+        """Create BST. """
+        self.counter = 0
+        for key in range(len(keys)):
+            self.insert(keys[key])
+            print(self.counter)
+
     def insert(self, value):
         """Insert."""
         if self.root is not None:
@@ -34,6 +42,7 @@ class BinarySearchTree(object):
 
     def __insert_helper(self, cur_node, value):
         """Insert Helper."""
+        self.counter += 1
         if(value < cur_node.key):
             if cur_node.left is None:
                 cur_node.left = Node(value)
@@ -191,12 +200,13 @@ def choose_bst_option(option, bst):
 
 if __name__ == '__main__':
     bst = BinarySearchTree()
-    while True:
-        print("Choose an BST option")
-        node_value = input("0.Print,1.Insert,2.Delete,3.Search,4.Predecessor,\
-5.Successor,6.Preorder\n")
-        try:
-            node_value = int(node_value)
-            choose_bst_option(node_value, bst)
-        except ValueError:
-            print("You entered an invalid number")
+    bst.createBST([1,2,3])
+#     while True:
+#         print("Choose an BST option")
+#         node_value = input("0.Print,1.Insert,2.Delete,3.Search,4.Predecessor,\
+# 5.Successor,6.Preorder\n")
+#         try:
+#             node_value = int(node_value)
+#             choose_bst_option(node_value, bst)
+#         except ValueError:
+#             print("You entered an invalid number")
