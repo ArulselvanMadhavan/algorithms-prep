@@ -1,0 +1,10 @@
+[package]
+name = "bigger_the_greater"
+version = "0.1.0"
+authors = ["Arulselvan Madhavan <arulselv@ccs.neu.edu>"]
+
+[dependencies]
+
+[lib]
+name = "utils"
+path = "../../utils/src/lib.rs"

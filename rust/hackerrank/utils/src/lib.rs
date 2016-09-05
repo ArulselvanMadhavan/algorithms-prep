@@ -11,6 +11,12 @@ pub fn read_line_of_integers() -> Vec<i32> {
     input_vals_vec
 }
 
+pub fn read_line_as_string() -> String {
+    let mut buffer = String::new();
+    io::stdin().read_line(&mut buffer).ok().expect("Failed to read input");
+    buffer.trim().to_string()
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
