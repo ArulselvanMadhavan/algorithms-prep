@@ -1,0 +1,10 @@
+[package]
+name = "strange_counter"
+version = "0.1.0"
+authors = ["Arulselvan Madhavan <arulselv@ccs.neu.edu>"]
+
+[dependencies]
+
+[lib]
+name = "utils"
+path = "../../utils/src/lib.rs"
